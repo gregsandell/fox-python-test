@@ -1,6 +1,3 @@
-def subtract(a: int, b: int) -> int:
-    return a - b
-
 # TODO represent intervals this way:
 # from typing import List, Tuple
 #

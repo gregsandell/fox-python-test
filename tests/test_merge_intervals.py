@@ -1,7 +1,4 @@
-from task2_merge_intervals import subtract, sort_intervals, all_intervals_valid, itemsAreIntervals, mergeIntervals
-
-def test_subtract():
-    assert subtract(5, 3) == 2
+from task2_merge_intervals import sort_intervals, all_intervals_valid, itemsAreIntervals, mergeIntervals
 
 class TestSortIntervals:
     def testCorrectOrder(self):

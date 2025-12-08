@@ -21,7 +21,7 @@ Fix fib function and provide iterative and memoized versions.
 Implement group_anagrams(words: list[str]) -> list[list[str]].
 
 ## Status of my work:
-I began with work on Friday Dec 5.  [Commit acac8f8](https://github.com/gregsandell/fox-python-test/commit/acac8f8e6e51434b96f4428c86521da65c67ac1b) is my last commit of the weekend (Sunday night Dec 7). 
+I began with work on Friday Dec 5.  [Commit 349d341](https://github.com/gregsandell/fox-python-test/commit/349d3413d63249c1e6e8c2aee37b1576a4ef74e2) is my last commit by the Mon Dec 8 noon PST deadline. 
 
 As of that commit here is the status of my work:
 

@@ -1,13 +1,10 @@
 from datetime import datetime
-def multiply(a: int, b: int) -> int:
-    return a * b
 
 def timestamp() -> str:
     now = datetime.now()
     return now.strftime("%Y-%m-%d %H:%M:%S")
 
 class Logger:
-
     def __init__(self):
         self.entries: list[dict[str, str]] = []
 

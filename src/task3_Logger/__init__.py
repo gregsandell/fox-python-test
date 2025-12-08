@@ -1,6 +1,4 @@
 from datetime import datetime
-def multiply(a: int, b: int) -> int:
-    return a * b
 
 def timestamp() -> str:
     now = datetime.now()
@@ -22,10 +20,12 @@ class Logger:
         return self.entries
 
     def search(self, keyword: str = "", field: str = "message") -> list[dict]:
-        if str != "" and field == "message":
-            return [obj for obj in self.entries if keyword in obj["message"]]
-        if str != "" and field == "level":
-            return [obj for obj in self.entries if keyword in obj["level"]]
+        if not keyword:
+            return self.entries
 
+        if field not in {"message", "level"}:
+            raise ValueError(f"Invalid field: {field}")
+
+        return [obj for obj in self.entries if keyword in obj.get(field, "")]
 
 

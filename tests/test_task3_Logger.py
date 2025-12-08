@@ -22,10 +22,11 @@ def test_search_on_message():
     myLogger.log(mesg1, 'INFO')
     myLogger.log(mesg2, 'DEBUG')
     myLogger.log(mesg3, 'ERROR')
-    result = myLogger.search("now")
+    result = myLogger.search(keyword="now")
     assert(any(mesg1 in obj["message"] for obj in result))
     assert(any(mesg2 in obj["message"] for obj in result))
     assert(any(mesg3 in obj["message"] for obj in result)) == False
+
 def test_search_on_level():
     myLogger = Logger()
     myLogger.log("anything", "INFO")
@@ -35,7 +36,7 @@ def test_search_on_level():
     assert(len(result)) == 2
     assert(item == "INFO" for item.level in result)
 
-def test_wildcard_everyting():
+def test_wildcard_everything():
     myLogger = Logger()
     myLogger.log("anything", "INFO")
     myLogger.log("anything", 'ERROR')

@@ -5,7 +5,6 @@ def timestamp() -> str:
     return now.strftime("%Y-%m-%d %H:%M:%S")
 
 class Logger:
-
     def __init__(self):
         self.entries: list[dict[str, str]] = []
 

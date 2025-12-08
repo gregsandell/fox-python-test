@@ -8,7 +8,6 @@ def findMaxWord(countDict: dict[str, int]) -> str:
 def makeWordCountMap(textList: list[str]) -> dict:
     wordMap = { }
     for word in textList:
-        # wordMap[word] = wordMap.get(word, 0) + 1 # check if this works
         if word in wordMap:
             wordMap[word] += 1
         else:

@@ -27,9 +27,11 @@ As of that commit here is the status of my work:
 
 1. Task 1 - completed
 2. Task 2 - completed
-3. Task 3 - completed
-4. Task 4 - problem with instructions...no broken `fib` function was provided
-5. Task 5 - not begun...ran out of time by Sunday evening
+3. Task 3 - completed.
+4. Task 4 - Skipped because: problem with instructions...no broken `fib` function was provided
+5. Task 5 - completed
+
+> Note: Task 3 has a README of its own
 
 ## Testing tasks 1-3
 In the project root directory, enter `pytest` in a terminal

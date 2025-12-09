@@ -1,4 +1,10 @@
 # fox-python-test
+> URGENT NOTE
+> 
+> Please run `pip install fastapi pydantic PyYAML pytest pytest-cov pytest-watch`
+> to install necessary dependencies.  Then the tests should run.
+> 
+
 Programming challenge from Fox Studios by Greg Sandell, Dec 2025
 
 Location of this repo: `main` branch of [https://github.com/gregsandell/fox-python-test](https://github.com/gregsandell/fox-python-test)

@@ -5,13 +5,27 @@ In terminal:
 2. go to directory src/task3_logger/App
 2. Run `uvicorn main:app --reload`
 
-Using curl or POSTMAN:
-* Add a log line with PUT endpoint `http://127.0.0.1:8000/log`
-  * Sample input:  use a raw JSON body of `{ "message": "This is my log message", "level": "INFO"}`
-* View available logs with GET endpoint `http://127.0.0.1:8000/logs`
-* Search with the endpoint `http://127.0.0.1:8000/logs/search`
-  * Sample input:  use keyword=mess and level=INFO, i.e. the full
-    endpoint will be http://127.0.0.1:8000/logs/search?keyword=mad&field=message
-  * The response will be the record you added with the PUT `/log` will 
+> Note: entered logs do not persist beyond the current uvicorn session
+
+Testing with Curl:
+Add a log line with the `/log` PUT endpoint:
+
+1. View stored logs with the `/logs` GET endpoint:
+> curl --location 'http://127.0.0.1:8000/logs'
+
+2. Add a log with the `/log` PUT endpoint:
+```javascript
+curl --location 'http://127.0.0.1:8000/log' \
+--header 'Content-Type: application/json' \
+--data '{ "message": "Hello world, how are you?", "level": "INFO"}'
 ```
+3. Search logs with the `/logs/search` GET endpoint:
+* Search by message:
+```javascript
+curl --location 'http://127.0.0.1:8000/logs/search?keyword=world&field=message'
+``` 
+* Search by level (e.g. INFO, ERROR, DEBUG)
+```javascript
+curl --location 'http://127.0.0.1:8000/logs/search?keyword=world&field=message'
+``` 
 

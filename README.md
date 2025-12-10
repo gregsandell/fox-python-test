@@ -1,7 +1,7 @@
 # fox-python-test
 > URGENT NOTE
 > 
-> Please run `pip install fastapi pydantic PyYAML pytest pytest-cov pytest-watch`
+> Please run `pip install fastapi pydantic PyYAML pytest pytest-cov pytest-watch uvicorn`
 > to install necessary dependencies.  Then the tests should run.
 > 
 
